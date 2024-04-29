@@ -10,19 +10,21 @@ def log_stats():
     db = client.logs
     nginx_collection = db.nginx
 
+    # Count total logs
     logs_count = nginx_collection.count_documents({})
     print(f"{logs_count} logs")
 
+    # Count logs per method
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print("Methods:")
     for method in methods:
         count = nginx_collection.count_documents({"method": method})
         print(f"method {method}: {count}")
 
-    # Splitting the statement to adhere to the line length limit
+    # Count logs where method=GET and path=/status
     status_filter = {"method": "GET", "path": "/status"}
-    status_check = nginx_collection.count_documents(status_filter)
-    print(f"{status_check} status check")
+    status_count = nginx_collection.count_documents(status_filter)
+    print(f"{status_count} status check")
 
 
 if __name__ == "__main__":
