@@ -4,8 +4,25 @@ Simple pagination implementation for a dataset.
 """
 
 import csv
-from typing import List
-from 0-simple_helper_function import index_range
+from typing import List, Tuple
+
+
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    """
+    Returns a tuple of size two containing a start index and an end index
+    corresponding to the range of indexes to return in a list for those
+    particular pagination parameters.
+
+    Parameters:
+    - page (int): The page number (1-indexed).
+    - page_size (int): The size of each page.
+
+    Returns:
+    - Tuple[int, int]: A tuple of the start and end index.
+    """
+    start = (page - 1) * page_size
+    end = page * page_size
+    return start, end
 
 
 class Server:
