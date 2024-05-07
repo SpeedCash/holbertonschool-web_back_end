@@ -1,7 +1,9 @@
-libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+*
+!*.js
+!*.md
+*main.js
+!holbertonschool-web_back_end
+!ES6_basic
+!ES6_classes
 ES6_basic/.eslintrc.js
 ES6_basic/babel.config.js
-ES6_basic/package.json
-ES6_classes/.eslintrc.js
-ES6_classes/babel.config.js
-ES6_classes/package.json
