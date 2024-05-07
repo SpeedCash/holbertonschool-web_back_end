@@ -1,15 +1,13 @@
-// 1-block-scoped.js
+export default function taskBlock(trueOrFalse)
+{
+  const task = false;
+  const task2 = true;
 
-export default function taskBlock(trueOrFalse) {
-    let task = false;
-    let task2 = true;
-  
-    if (trueOrFalse) {
-      // Ici, nous utilisons des variables distinctes avec 'let'
-      task = true;
-      task2 = false;
-    }
-  
-    return [task, task2];
+  if (trueOrFalse) {
+    /* eslint-disable */
+    const task = true;
+    const task2 = false;
   }
-  
+
+  return [task, task2];
+}
