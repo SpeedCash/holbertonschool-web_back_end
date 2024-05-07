@@ -7,3 +7,4 @@
 !ES6_classes
 ES6_basic/.eslintrc.js
 ES6_basic/babel.config.js
+ES6_classes/.eslintrc.js
