@@ -10,3 +10,9 @@ ES6_basic/babel.config.js
 ES6_classes/.eslintrc.js
 ES6_basic/0-main.js
 !ES6_promise
+!0-main.js
+!1-main.js
+!2-main.js
+!3-main.js
+!4-main.js
+!5-main.js
