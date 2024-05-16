@@ -1,9 +1,6 @@
-function getResponseFromAPI() {
-    // Returning a new Promise that resolves to undefined (no specific behavior was defined)
+export default function getResponseFromAPI() {
     return new Promise((resolve) => {
-        resolve();
+      resolve();
     });
-}
-
-// Export the function as required
-export default getResponseFromAPI;
+  }
+  
