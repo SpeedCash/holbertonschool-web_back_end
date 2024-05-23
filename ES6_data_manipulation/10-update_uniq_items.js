@@ -1,13 +1,13 @@
-// 10-update_uniq_items.js
 export default function updateUniqueItems(map) {
-    if (!(map instanceof Map)) {
-      throw new Error('Cannot process');
-    }
-  
-    for (const [key, value] of map) {
-      if (value === 1) {
-        map.set(key, 100);
-      }
-    }
+  // Vérification plus concise de l'instance de Map
+  if (!(map instanceof Map)) {
+    throw new Error('Cannot process');
   }
-  
+
+  // Utilisation de forEach pour une meilleure lisibilité
+  map.forEach((value, key) => {
+    if (value === 1) {
+      map.set(key, 100);
+    }
+  });
+}
