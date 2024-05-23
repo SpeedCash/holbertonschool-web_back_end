@@ -1,5 +1,12 @@
-// 7-has_array_values.js
 export default function hasValuesFromArray(set, arr) {
-    return arr.every(value => set.has(value));
+  // Vérification des arguments 'set' et 'arr' pour s'assurer qu'ils sont de types corrects
+  if (!(set instanceof Set)) {
+    throw new TypeError('The first argument must be a Set');
   }
-  
+  if (!Array.isArray(arr)) {
+    throw new TypeError('The second argument must be an array');
+  }
+
+  // Vérification si chaque valeur du tableau est présente dans le Set
+  return arr.every(value => set.has(value));
+}
