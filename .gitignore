@@ -1,0 +1,14 @@
+*
+!*.js
+!*.md
+*main.js
+!holbertonschool-web_back_end
+!ES6_basic
+!ES6_classes
+ES6_basic/.eslintrc.js
+ES6_basic/babel.config.js
+ES6_classes/.eslintrc.js
+ES6_basic/0-main.js
+!ES6_data_manipulation
+!ES6_promise/
+!6-main.js
